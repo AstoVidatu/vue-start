@@ -17,7 +17,8 @@
     "joi": "^13.3.0",
     "morgan": "^1.9.0",
     "sequelize": "^4.37.8",
-    "sqlite3": "^4.0.0"
+    "sqlite3": "^4.0.0",
+    "vuetify": "^1.0.18"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
