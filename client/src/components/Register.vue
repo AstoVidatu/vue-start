@@ -1,34 +1,22 @@
 <template>
-  <v-layout column class="center">
-    <v-flex xs6 class="width" >
-      <panel title="Register">
-        <form
-          name="tab-tracker-form"
-          autocomplete="off">
-          <v-text-field
-            label="Email"
-            v-model="email"
-          ></v-text-field>
-          <br>
-          <v-text-field
-            label="Password"
-            type="password"
-            v-model="password"
-            autocomplete="new-password"
-          ></v-text-field>
-        </form>
-        <br>
-        <div class="danger-alert" v-html="error" />
-        <br>
-        <v-btn
-          dark
-          class="cyan"
-          @click="register">
-          Register
-        </v-btn>
-      </panel>
+  <v-layout>
+    <v-flex xs6 offset-xs3>
+      <div class="white elevation-2">
+        <v-toolbar flat dense class="red darken-1" dark>
+          <v-toolbar-title>Register</v-toolbar-title>
+        </v-toolbar>
+
+          <div class="pl-4 pr-4 pt-2 pb-2">
+            <v-text-field autocomplete="off" v-model="email" name="email" label="Email address"></v-text-field>
+            <v-text-field autocomplete="off" v-model="password" name="password" label="Password"></v-text-field>
+            <div class="err" v-html="error"/><br>
+            <v-btn class="red darken-1" dark @click="register">Sign in</v-btn>
+          </div>
+
+      </div>
     </v-flex>
   </v-layout>
+
 </template>
 
 <script>
@@ -56,11 +44,10 @@ export default {
 }
 </script>
 <style scoped>
-.width{
-  width: 50%;
-}
-.center{
-  margin-left: auto;
-  margin-right: auto;
+  .err {
+    color: red;
+  }
+  .primary--text {
+    color: red;
 }
 </style>
